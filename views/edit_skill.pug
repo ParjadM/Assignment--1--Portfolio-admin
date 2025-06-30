@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  .container.mt-5
+    h1.mb-4  Edit Skill
+    form(action=`/edit/skill/${skill._id}` method="POST")
+      .mb-3
+        label.form-label Name:
+        input.form-control(type="text" name="name" value=skill.name)
+      .mb-3
+        label.form-label Level:
+        select.form-select(name="level")
+          option(value="Beginner") Beginner
+          option(value="Intermediate") Intermediate
+          option(value="Expert") Expert
+      .mb-3
+        label.form-label Technologies:
+        input.form-control(type="text" name="technology" value=skill.technology)
+      button.btn.btn-primary(type="submit") Update
