@@ -97,4 +97,5 @@ app.post('/edit/skill/:id', async (req, res) => {
   res.redirect('/');
 });
 
-app.listen(3000, () => console.log('Server running on port 3000'));
+app.listen(port, () => console.log(`Server running on port ${port}`));
+
